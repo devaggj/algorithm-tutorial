@@ -1,5 +1,8 @@
 """
 https://www.acmicpc.net/problem/1181
+
+길이가 짧은 것  부터
+길이가 같으면 사전 순으로
 """
 
 def compare(num1, num2):
