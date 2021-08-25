@@ -1,3 +1,7 @@
+"""
+reference: https://programmers.co.kr/learn/courses/30/lessons/12928?language=python3
+"""
+
 def solution_01(n):
     answer = 0
     

@@ -1,3 +1,7 @@
+"""
+refernce: https://programmers.co.kr/learn/courses/30/lessons/12930?language=python3
+"""
+
 def solution_01(s):
     
     strange_txt = ''
@@ -11,6 +15,7 @@ def solution_01(s):
         strange_txt += ' '
         
     return strange_txt[:-1]
+    # return strange_txt.rstrip()   # 문제에서는 통과 못했던 방법
 
 
 def solution_02(s):

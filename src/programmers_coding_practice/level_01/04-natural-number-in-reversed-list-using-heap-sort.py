@@ -1,3 +1,11 @@
+"""
+reference: https://programmers.co.kr/learn/courses/30/lessons/12932?language=python3
+
+[NOTE] 힙 정렬을 이용했기에 항상 정렬된 형태로 뒤집혀서 return 함
+원래 문제의 취지와는 좀 다른 방식
+"""
+
+
 def reversed_list(natural_number):
     
     list_stringified = list(map(lambda x: int(x), list(str(natural_number))))
