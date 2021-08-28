@@ -16,14 +16,12 @@ def solution_02(n):
     return ''.join('수박'[i % 2] for i in range(0, n))
 
 
-def main(n):
-    print(solution_01(n))
-    print(solution_02(n))
-
+def main():
+    N = 3
+    
+    print(solution_01(N))
+    print(solution_02(N))
 
 
 if __name__ == '__main__':
-    N = 3
-    
-    main(N)
-    
+    main()
