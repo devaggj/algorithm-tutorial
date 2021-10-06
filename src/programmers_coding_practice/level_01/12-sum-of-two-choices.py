@@ -10,6 +10,7 @@ def solution(numbers):
             answer.add(numbers[i] + numbers[j])
     return sorted(answer)
 
+
 from itertools import combinations
 def solution2(numbers):
     answer = set()
