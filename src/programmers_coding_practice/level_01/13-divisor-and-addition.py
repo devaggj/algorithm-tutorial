@@ -13,7 +13,7 @@ def solution(left, right):
                 divisor_cnt += 1
         
         if divisor_cnt % 2 == 0:
-            answer += i
+            answer += i 
         else: 
             answer -= i
     return answer
