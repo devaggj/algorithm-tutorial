@@ -15,16 +15,19 @@ def solution(N, stages):
             rate[stage] += 1
 
     for stage, user_failed in rate.items():
-        rate[stage] = user_failed / user_played
-        user_played -= user_failed
+        if user_played != 0:
+            rate[stage] = user_failed / user_played
+            user_played -= user_failed
+        else:
+            rate[stage] = 0
     
     return sorted(rate, key=lambda x: rate[x], reverse=True)
     
 
 
 def main():
-    n = 5
-    s = [2, 1, 2, 6, 2, 4, 3, 3]
+    n = 4
+    s = [4,4,4,4,4]
     print(solution(n, s))  # return [3,4,2,1,5]
     
 if __name__ == "__main__":
