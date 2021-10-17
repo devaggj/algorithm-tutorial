@@ -26,8 +26,8 @@ def solution(N, stages):
 
 
 def main():
-    n = 4
-    s = [4,4,4,4,4]
+    n = 5
+    s = [2, 1, 2, 6, 2, 4, 3, 3]
     print(solution(n, s))  # return [3,4,2,1,5]
     
 if __name__ == "__main__":
