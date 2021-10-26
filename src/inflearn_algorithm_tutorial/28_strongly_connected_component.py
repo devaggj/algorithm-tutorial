@@ -21,7 +21,8 @@ MAX = 10001
 id = 0
 degree = [ i for i in range(1, MAX) ]
 finished = [False] * MAX        # 특정한 node에 대해 dfs가 끝났는지를 확인
-adjacent = [0] * MAX            # 인접한 node들
+# adjacent = [[]] * MAX            # 인접한 node들
+adjacent = [ [] for i in range(MAX)]
 SCC = []                        # 실질적 strongly connected component
 stack = []
 
@@ -61,8 +62,32 @@ def dfs(x):
 
 
 def main():
-    # s = ""
-    # print(solution(s))
+    v = 11
+    adjacent[1].append(2)
+    adjacent[2].append(3)
+    adjacent[3].append(1)
+    adjacent[4].append(2)
+    adjacent[4].append(5)
+    adjacent[5].append(7)
+    adjacent[6].append(5)
+    adjacent[7].append(6)
+    adjacent[8].append(5)
+    adjacent[8].append(9)
+    adjacent[9].append(10)
+    adjacent[10].append(11)
+    adjacent[11].append(3)
+    adjacent[11].append(8)
+    
+    for i in range(1, (v + 1)):
+        if degree[i] == 0: dfs(i)
+        
+    print(f'SCC의 갯수: {len(SCC)}')
+    for i in range(0, len(SCC)):
+        print(f'{i + 1}번째 SCC')
+        for j in range(0, len(SCC[i])):
+            print(f'{SCC[i][j]} ')
+        print("", sep='\n')
+    
     
 if __name__ == "__main__":
     main()
