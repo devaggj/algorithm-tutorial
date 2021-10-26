@@ -17,18 +17,24 @@
 
 MAX = 10001
 
-
 id = 0
-degree = [ i for i in range(1, MAX) ]
-finished = [False] * MAX        # 특정한 node에 대해 dfs가 끝났는지를 확인
-# adjacent = [[]] * MAX            # 인접한 node들
-adjacent = [ [] for i in range(MAX)]
-SCC = []                        # 실질적 strongly connected component
+degree = [ 0 for _ in range(1, MAX) ]
+finished = [False] * MAX                # 특정한 node에 대해 dfs가 끝났는지를 확인
+'''
+adjacent = [[]] * MAX
+위 방식으로 하면 2차원 배열 안에 각 배열들이 전부 값은 참조id값을 가져서 
+adjacent[0].append(1)을 하면 다른 2차원배열 안의 배열들도 전부 같이 값이 변함
+'''
+adjacent = [ [] for _ in range(MAX)]    # 인접한 node들
+SCC = []                                # 실질적 strongly connected component
 stack = []
 
 
 def dfs(x):
-    # d[x] = ++id       # node마다 고유한 번호 할당
+    
+    global id
+    id += 1
+    degree[x] = id      # node마다 고유한 번호 할당
     stack.append(x)     # stack에 자기 자신 삽입
     
     parent = degree[x]      # 자기 자신이 부모가 됨
@@ -37,25 +43,28 @@ def dfs(x):
         
         # y는 인접한 node 자체를 가리킴
         y = adjacent[x][i]
-        
-        # 만약에 해당 node를 방문한 적이 없다면, 해당 node로 dfs를 실행
-        # 결과적으로 더 작은값으로 parent를 가리키게됨
-        if degree[y] == 0: parent = min(parent, dfs(y))
+        if degree[y] == 0: 
+            # 만약에 해당 node를 방문한 적이 없다면, 해당 node로 dfs를 실행
+            # 결과적으로 더 작은값으로 parent를 가리키게됨
+            parent = min(parent, dfs(y))
         # 방문은 했지만, 아직 처리가 안된 node (현재 dfs를 수행하고 있는 node)
         # parent값을 처리되고 있는 값의 부모와 비교를 해서 더 작은값을 선택
-        elif not finished[y]: parent = min(parent, degree[y])
+        elif not finished[y]: 
+            parent = min(parent, degree[y])
         
-        # parent node가 자기 자신인 경우
-        if parent == degree[x]:
-            scc = []
-            while True:
-                # top = stack[-1]
-                # stack.pop()
-                top = stack.pop()
-                scc.append(top)
-                finished[top] = True
-                if top == x: break
-            SCC.append(scc)
+    # parent node가 자기 자신인 경우
+    # 1, 2, 3 일 때 1이 다시 돌아왔을 때
+    if parent == degree[x]:
+        scc = []
+        while True:
+            # top = stack[-1]
+            # stack.pop()
+            top = stack.pop()
+            scc.append(top)
+            finished[top] = True
+            if (top == x): 
+                break
+        SCC.append(scc)
 
     # 자신의 부모값을 반환
     return parent
@@ -79,7 +88,8 @@ def main():
     adjacent[11].append(8)
     
     for i in range(1, (v + 1)):
-        if degree[i] == 0: dfs(i)
+        if degree[i] == 0: 
+            dfs(i)
         
     print(f'SCC의 갯수: {len(SCC)}')
     for i in range(0, len(SCC)):
