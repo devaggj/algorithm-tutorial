@@ -25,7 +25,7 @@ adjacent = [[]] * MAX
 위 방식으로 하면 2차원 배열 안에 각 배열들이 전부 값은 참조id값을 가져서 
 adjacent[0].append(1)을 하면 다른 2차원배열 안의 배열들도 전부 같이 값이 변함
 '''
-adjacent = [ [] for _ in range(MAX)]    # 인접한 node들
+adjacent = [ [] for _ in range(MAX) ]    # 인접한 node들
 SCC = []                                # 실질적 strongly connected component
 stack = []
 
