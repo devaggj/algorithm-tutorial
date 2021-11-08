@@ -3,16 +3,16 @@ link: https://www.inflearn.com/course/algorithm-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A
 '''
 
 MAX = 101
-adjacent = [ [] for _ in range(1, MAX) ]
-degree = [ 0 for _ in range(1, MAX) ]
-completed = [ False for _ in range(1, MAX) ]
+vertex = [ [] for _ in range(0, MAX) ]
+degree = [ 0 for _ in range(0, MAX) ]
+completed = [ False for _ in range(0, MAX) ]
 
 # return True if the matching is successful, else False
 def dfs(x):
     
     # 연결된 모든 노드에 대해서 들어갈 수 있는 시도
-    for i in range(0, len(adjacent)):
-        tried = adjacent[x][i]
+    for i in range(0, len(vertex[x])):
+        tried = vertex[x][i]
         
         # 이미 처리된 노드는 더 이상 볼 필요가 없음
         if completed[tried]:
@@ -28,14 +28,13 @@ def dfs(x):
 
 
 def main():
-    adjacent[1].append(1)
-    adjacent[1].append(2)
-    adjacent[1].append(3)
-    adjacent[2].append(1)
-    adjacent[3].append(2)
+    vertex[1].append(1)
+    vertex[1].append(2)
+    vertex[1].append(3)
+    vertex[2].append(1)
+    vertex[3].append(2)
     
     n = 3
-    m = 0
     count = 0
     for i in range(1, n + 1):
         if dfs(i):
