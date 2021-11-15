@@ -3,7 +3,7 @@ link: https://www.inflearn.com/course/algorithm-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A
 '''
 
 MAX = 101
-vertex = [ [] for _ in range(0, MAX) ]
+vertex = [ [0] for _ in range(0, MAX) ]
 degree = [ 0 for _ in range(0, MAX) ]
 completed = [ False for _ in range(0, MAX) ]
 
@@ -36,16 +36,17 @@ def main():
     
     n = 3
     count = 0
-    for i in range(1, n + 1):
+    for i in range(0, n + 1):
+        # completed = [ False for _ in range(0, MAX) ]
         if dfs(i):
             count += 1
     
     print(f'{count}개의 매칭이 이루어졌습니다.')
-    for i in range(1, MAX):
+    for i in range(0, MAX):
         if degree[i] != 0:
             print(f'{degree[i]} -> {i}')
     
-    return 0
+    print(degree)
 
 if __name__ == "__main__":
     main()
