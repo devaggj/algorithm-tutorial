@@ -4,7 +4,8 @@ class Hello:
         print('Hello World!');
         print('Meet Atom.');
 
-        print('test')
+        print('Hello World')
+        print('Hello VSC.');
 
 def main():
     Hello().run();
