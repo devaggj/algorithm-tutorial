@@ -1,7 +1,7 @@
 class Hello:
 
     def run(self):
-        #print('Hello World!');
+        print('Hello World!');
         print('Hello Atom.');
 
 def main():
