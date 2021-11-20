@@ -2,7 +2,7 @@ class Hello:
 
     def run(self):
         print('Hello World!');
-        return 0;
+        print('Hello Atom.');
 
 def main():
     Hello().run();
