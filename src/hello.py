@@ -1,8 +1,10 @@
 class Hello:
 
     def run(self):
-        #print('Hello World!');
-        print('Hello Atom.');
+        print('Hello World!');
+        print('Meet Atom.');
+
+        print('test')
 
 def main():
     Hello().run();
