@@ -3,8 +3,8 @@ class Hello:
     def run(self):
         print('Hello World!');
         print('Meet Atom.');
-        print('Hello VSC.');
-        
+        print('Hello VSCCC.');
+
         print('Meet Both')
 
         print('Hello Both')
