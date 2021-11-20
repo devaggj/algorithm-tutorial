@@ -3,11 +3,12 @@ class Hello:
     def run(self):
         print('Hello World!');
         print('Meet Atom.');
-
-        print('Hello World')
         print('Hello VSC.');
         
         print('Meet Both')
+
+        print('Hello Both')
+
 
 def main():
     Hello().run();
