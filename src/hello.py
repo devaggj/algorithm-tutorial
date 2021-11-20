@@ -6,6 +6,8 @@ class Hello:
 
         print('Hello World')
         print('Hello VSC.');
+        
+        print('Meet Both')
 
 def main():
     Hello().run();
