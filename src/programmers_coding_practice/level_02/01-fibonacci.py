@@ -9,7 +9,7 @@ def solution(n):
         a, b = b, a + b
     return b % 1234567
 
-    # if n <= 2: return 1
+    #  if n <= 2: return 1
     # return (solution(n-2) + solution(n-1)) % 1234567
 
 def main():
