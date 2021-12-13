@@ -1,19 +1,32 @@
 """
-:link: 
-:ref: 
+:link:
+:ref:
 """
 
 def solution(s):
-    
-    
+
+
+
+
+
+
+
+
+
+
     return 0
 
 
-
-
 def main():
+    import time
+
     s = ""
+    start_time = time.time()
     print(solution(s))
-    
-if __name__ == "__main__":
-    main()
+
+    end_time = time.time()
+    print("time:", end_time - start_time)
+
+
+# execute
+main()
