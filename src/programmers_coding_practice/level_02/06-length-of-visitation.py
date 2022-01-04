@@ -16,7 +16,7 @@ def solution(dirs):
         nx = px + v[0]
         ny = py + v[1]
 
-        if px < -5 or px > 5 or py < -5 or py > 5:
+        if nx < -5 or nx > 5 or ny < -5 or ny > 5:
             continue
 
         memo.add((px, py, nx, ny))
