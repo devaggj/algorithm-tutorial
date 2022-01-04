@@ -41,6 +41,7 @@ def solution(m, musicinfos):
 
         if m in melody_string:
             if answer["time"] < duration_minute:
+                answer["time"] = duration_minute
                 answer["title"] = title
 
     return answer["title"]

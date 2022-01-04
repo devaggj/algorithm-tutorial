@@ -1,17 +1,9 @@
 """
-:link:
+:link: 
 :ref:
 """
 
 def solution(s):
-
-
-
-
-
-
-
-
 
 
     return 0
