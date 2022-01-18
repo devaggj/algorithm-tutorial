@@ -1,6 +1,6 @@
 """
-:link:
-:ref:
+[LINK]
+[REF]
 """
 
 def solution(s):

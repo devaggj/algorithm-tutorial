@@ -11,9 +11,7 @@ def isBlock(length, y, x, arr):
         for j in range(x, x + length):
             if arr[y][x] != arr[i][j]:
                 return False
-
     return True
-
 
 def quad(length, y, x, arr):
     if isBlock(length, y, x, arr):
@@ -29,6 +27,7 @@ def quad(length, y, x, arr):
 def solution(arr):
     quad(len(arr), 0, 0, arr)
     return answer
+
 
 def main():
     # return [4,9]
