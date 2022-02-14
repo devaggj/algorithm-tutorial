@@ -1,8 +1,11 @@
 """
-[LINK]
+[LINK] https://programmers.co.kr/learn/courses/30/lessons/86052?language=python3
 [REF]
-[TITLE]
+[TITLE] 빛의 경로 사이클
 """
+
+import sys
+sys.setrecursionlimit(10 ** 6)
 
 def solution(s):
 
