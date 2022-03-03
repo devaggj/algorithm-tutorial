@@ -40,7 +40,7 @@ function solution(line) {
     // });
 
     // return paper.map(v => v.join(''));
-    return paper
+    return crossPoints
 }
 
 const line = [[2, -1, 4], [-2, -1, 4], [0, -1, 1], [5, -8, -12], [5, 8, 12]];
