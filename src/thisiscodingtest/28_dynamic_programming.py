@@ -1,5 +1,5 @@
 """
-[LINK]
+[LINK] https://www.youtube.com/watch?v=rWbjQphRE9A&list=PLVsNizTWUw7H9_of5YCB0FmsSc-K44y81&index=28&ab_channel=%ED%95%9C%EB%B9%9B%EB%AF%B8%EB%94%94%EC%96%B4
 [REF]
 [TITLE] 28강 다이나믹 프로그래밍 개요
 """

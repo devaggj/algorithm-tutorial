@@ -1,6 +1,7 @@
 """
 [LINK] https://programmers.co.kr/learn/courses/30/lessons/42860?language=python3
 [REF] https://bellog.tistory.com/152
+[REF] https://velog.io/@jeeseob5761/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A1%B0%EC%9D%B4%EC%8A%A4%ED%8B%B1
 [REF] https://whwl.tistory.com/93
 [TITLE] 조이스틱
 """
@@ -26,6 +27,9 @@ def solution(name):
 
             # 한 방향으로만 이동하는 경우, 오른쪽 이동 후 왼쪽으로 이동하는 경우
             min_move = min(min_move, idx + idx + len(name) - next)
+
+            # 처음부터 뒷부분을 먼저 입력하는 것이 더 빠른 경우
+            min_move =min(min_move, (len(name) - next) * 2 + idx)
 
     answer += min_move
     return answer
@@ -66,8 +70,8 @@ def main():
     # name = "JAN"        # return 23
     name = "JEROEN"     # return 56
 
-    # print(solution(name))
-    print(solution2(name))
+    print(solution(name))
+    # print(solution2(name))    # solution2는 2022년 버전은 해당 안됨
 
 
 ###
