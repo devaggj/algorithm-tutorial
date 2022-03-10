@@ -10,7 +10,7 @@ def cross_point(line1, line2):
     c, d, f = line2
 
     denom = a * d - b * c
-    # 분모가 0 => 평행 혹은 일치
+    # 분모가 0 -> 평행 혹은 일치
     if denom == 0:
         return None
 
@@ -65,6 +65,10 @@ def solution(line):
 
     # 좌표평면 그리기
     answer = ['.' * (x_max - x_min + 1)] * (y_max - y_min + 1)
+
+    # print(x_max, x_min, y_max, y_min)
+    # print(coordinates)
+    print(answer)
 
     for coord in coordinates:
         x, y = coord

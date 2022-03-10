@@ -44,4 +44,7 @@ function solution(line) {
 }
 
 const line = [[2, -1, 4], [-2, -1, 4], [0, -1, 1], [5, -8, -12], [5, 8, 12]];
+
 console.log(solution(line))
+
+console.log(Number('1e9'))
