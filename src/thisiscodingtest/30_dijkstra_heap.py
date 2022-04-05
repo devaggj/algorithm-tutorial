@@ -44,9 +44,9 @@ def dijkstra(start):
     while q: # 큐가 비어있지 않다면
         # 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기
         dist, now = heapq.heappop(q)
-        # 현재 노드가 이미 처리된 적이 있는 노드라면 무시 (이미 가장 낮은 dist를 갱신했을 경우에 해당)
         print("now:", now)
-
+        
+        # 현재 노드가 이미 처리된 적이 있는 노드라면 무시 (이미 가장 낮은 dist를 갱신했을 경우에 해당)
         if distance[now] < dist:
             print("distance[now]", distance[now],dist)
             continue
