@@ -1,6 +1,7 @@
 """
 [LINK] https://programmers.co.kr/learn/courses/30/lessons/68645?language=python3
-[]
+[REF] https://developnote.tistory.com/26
+[REF] https://minhamina.tistory.com/58
 [TITLE] 삼각 달팽이
 """
 
